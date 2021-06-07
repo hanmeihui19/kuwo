@@ -1,0 +1,543 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 50px;
+    background-color: black;
+    display: flex;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.container1 {
+    display: flex;
+    width: 520px;
+    justify-content: space-around;
+    line-height: 50px;
+}
+
+.container1 .item1 {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.container1 .item1 a:hover{
+    color: orange;
+}
+
+.container2 {
+    width: 330px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2 .item2{
+    display: flex;
+    align-items: baseline;
+}
+
+.container2 a{
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.container2 #star{
+    background: url(images/chajian.png);
+    background-position: -230px -20px;
+    width: 20px;
+    height: 20px;
+}
+
+.container2 .item2 a:hover{
+    color: orange;
+}
+
+.container3 {
+    display: flex;
+    width: 140px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container3 a {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container3 .item3 a:hover {
+    color: orange;
+}
+
+.container4 {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container4 input {
+    margin-left: 8px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    width: 120px;
+}
+
+.container4 #search {
+    background: url(images/search.png);
+    width: 180px;
+    height: 25px;
+}
+
+.section-song{
+    height: 720px;
+    background-color: whitesmoke;
+}
+
+.song{
+    position: absolute;
+    display: flex;
+}
+
+.section-song h1{
+    position: relative;
+    left: 320px;
+    top: 70px;
+}
+.section-song .introduce {
+    position: relative;
+    left: 190px;
+    top: 100px;
+}
+
+.section-song .introduce a{
+    text-decoration: none;
+}
+
+.section-song .introduce .share{
+    color: black;
+}
+
+.section-song .introduce .orange{
+    color: orange;
+}
+
+.section-song .introduce .grey{
+    color: grey;
+}
+
+.section-song .time {
+    position: relative;
+    left: 195px;
+    top: 110px;
+    font-size: 14px;
+}
+
+.section-song hr{
+    position: relative;
+    left: 50px;
+    top: 115px;
+    width: 620px;
+}
+
+.section-song .word {
+    position: relative;
+    left: 74px;
+    top: 130px; 
+    width: 600px;
+    height: 450px;
+    text-align: center;
+    overflow: auto;
+}
+
+.section-song .word::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section-song .word::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.section-song .word::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+.section-song .word .light {
+    color: orange;
+}
+
+.section-song p{
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.section-song .song-right {
+    position: absolute;
+}
+
+@keyframes animation1{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.section-song .song-right .yang{
+    position: relative;
+    left: 820px;
+    top: 100px;
+    display: flex;
+}
+
+.section-song .song-right .big{
+    position: relative;
+    top: 86px;
+    left: -166px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+}
+
+.section-song .song-right .small{
+    position: relative;
+    top: 118px;
+    left: -216px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255);
+}
+
+.section-song .yang img{
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    border: 3px solid lightgrey;
+    padding: 4px;
+    animation: animation1 10s linear infinite;
+}
+
+.song .player {
+    width: 400px;
+    height: 60px;
+    position: relative;
+    left: 740px;
+    top: 130px;
+    background-color: white;
+    display: flex;
+}
+
+.song .player #playBtn {
+    position: relative;
+    left: 16px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background: url('images/icon.jpg');
+    background-position: -110px -88px;
+}
+
+.song .player #mute {
+    position: relative;
+    left: 70px;
+    top: 22px;
+    width: 24px;
+    height: 24px;
+    background: url('images/icon.jpg');
+    background-position: -68px 0px;
+}
+
+.song .player #prograssBar {
+	position: relative;
+	width: 220px;
+	height: 4px;
+    top: 30px;
+    left: 36px;
+	background-color: rgba(120,120,120,0.5);
+    border-radius: 5px;
+}
+
+.song .player #currentProgress {
+	width: 0px;
+	height: 4px;
+	background: #ffcd2d;
+}
+
+.song .player #processBtn {
+    display: block;
+	width: 8px;
+	height: 8px;
+    border-radius: 50%;
+	background: #ffcd2d;
+	position: relative;
+	top: -6px;
+    left: 0px;
+} 
+
+.song .player #time {
+    position: relative;
+    top: 24px;
+    left: 45px;
+    font-size: 12px;
+    color: rgba(120,120,120,0.8);
+}
+
+.song .download {
+    position: relative;
+    left: 840px;
+    top: 170px;
+    width: 200px;
+    height:40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(12, 12, 92, 0.4);
+    display: flex;
+}
+
+.song .download .arrow {
+    background: url('images/chajian.png');
+    background-position: -46px -15px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.song .download a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.song .discuss {
+    display: flex;
+    width: 320px;
+    height: 60px;
+    position: relative;
+    left: 750px;
+    top:220px;
+}
+
+.song .gzy img{
+    border-radius: 50%;
+}
+
+.song .talk {
+    position: relative;
+}
+
+.song .class{
+    position: relative;
+    top: -52px;
+    left: 18px;
+}
+
+.song .class a {
+    font-size:14px;
+    color: rgba(12, 12, 92, 0.6);
+    text-decoration: none;
+}
+
+.song .blue {
+    font-size:14px;
+    color: black;
+    position: relative;
+    top: -48px;
+    left: 18px;
+}
+
+.song .go {
+    position: relative;
+    left: 180px;
+    top: -70px;
+}
+
+.song .go a{
+    font-size:13px;
+    color: purple;
+    text-decoration: none;
+}
+
+.leave-word{
+    background-color: white;
+    padding: 40px;
+}
+
+.leave-word .all a {
+    color: black;
+    text-decoration: none;
+}
+
+.leave-word .all span {
+    font-size: 13px;
+}
+
+.leave-word hr {
+    margin-top:16px;
+}
+
+.leave-word .say {
+    display: flex;
+}
+
+.leave-word .gzy_{
+    margin-top: 16px;
+}
+
+.leave-word textarea {
+    margin-top: 16px;
+    margin-left: 18px;
+    padding: 10px;
+}
+
+.leave-word .emoji {
+    margin-top: 16px;
+    margin-left: 18px;
+}
+
+.leave-word .emoji-count {
+    display: flex;
+}
+
+.leave-word #count {
+    margin-top: 24px;
+    margin-left: 630px;
+    font-size: 14px;
+}
+
+.leave-word #btn {
+    border: none;
+    margin-top:16px;
+    margin-left:16px;
+    width: 80px;
+    height: 36px;
+    background-color: orange;
+    color:white;
+    line-height:36px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.leave-word .good a{
+    text-decoration: none;
+    color: black;
+}
+
+.board {
+    height: 431px;
+    width: 800px;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.board li{
+    list-style-type: none;
+    height: 110px;
+    border-bottom: 1px dotted grey;
+    padding: 8px;
+    display: flex;
+}
+
+.board #main {
+    margin-left:10px;
+}
+
+.board a {
+    color:orange;
+    text-decoration: none;
+}
+
+.board #main #word {
+    width: 400px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+.board #main #word img{
+    position: relative;
+    top: 5px;
+}
+
+.board #main #date {
+    width: 400px;
+    height: 20px;
+    color: lightslategrey;
+    font-size: 14px;
+}
+
+.board #lists {
+    position: absolute;
+    height: 381px;
+    top: 0;
+}
+
+.board #hidden {
+    position: relative;
+    overflow: hidden;
+    height: 381px;
+}
+
+.board .aside {
+    margin-left: 160px;
+}
+
+.board .share{
+    margin-left: 100px;
+    margin-bottom: 60px;
+}
+
+.board .aside a {
+    color: grey;
+    font-size: 16px;
+}
+
+.board .page {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.board .page div {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(120,120,120,0.2);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 16px;
+}
+
+.board .page div:hover{
+    color: white;
+    background-color: orange;
+}
+
+.board .page .point{
+    background-color: white;
+    color: rgba(120,120,120);
+}
+
+.board .page .point:hover{
+    background-color: white;
+    color: rgba(120,120,120);
+}
